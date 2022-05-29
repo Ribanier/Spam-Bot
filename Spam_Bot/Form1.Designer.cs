@@ -37,9 +37,13 @@ namespace Spam_Bot
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -78,6 +82,7 @@ namespace Spam_Bot
             // 
             // timer1
             // 
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // button2
@@ -94,6 +99,8 @@ namespace Spam_Bot
             this.button2.Text = "STOP";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.MouseEnter += new System.EventHandler(this.button2_MouseEnter);
+            this.button2.MouseLeave += new System.EventHandler(this.button2_MouseLeave);
             // 
             // label3
             // 
@@ -106,19 +113,11 @@ namespace Spam_Bot
             this.label3.Text = "Countdown \r\nto start(second)";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(70, 309);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(58, 20);
-            this.textBox1.TabIndex = 13;
-            this.textBox1.Text = "5";
-            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(384, 311);
+            this.checkBox1.Location = new System.Drawing.Point(384, 312);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(63, 17);
             this.checkBox1.TabIndex = 12;
@@ -138,25 +137,81 @@ namespace Spam_Bot
             this.label2.Text = "@Ribanier";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(145, 280);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 26);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Spam rate\r\n(1000 = 1 sec)";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(155, 309);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(58, 20);
+            this.numericUpDown1.TabIndex = 18;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(70, 309);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(58, 20);
+            this.numericUpDown2.TabIndex = 19;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(507, 550);
+            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.checkBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Spam Bot";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Leave += new System.EventHandler(this.Form1_Leave);
+            this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDoubleClick);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,9 +225,11 @@ namespace Spam_Bot
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
     }
 }
 

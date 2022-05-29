@@ -18,3 +18,13 @@ C:\Users\sadik\Desktop\Spam_Bot\Spam_Bot\obj\Debug\Spam_Bot.csproj.GenerateResou
 C:\Users\sadik\Desktop\Spam_Bot\Spam_Bot\obj\Debug\Spam_Bot.csproj.CoreCompileInputs.cache
 C:\Users\sadik\Desktop\Spam_Bot\Spam_Bot\obj\Debug\Spam_Bot.exe
 C:\Users\sadik\Desktop\Spam_Bot\Spam_Bot\obj\Debug\Spam_Bot.pdb
+D:\GitHub\Spam-Bot\Spam_Bot\bin\Debug\Spam_Bot.exe.config
+D:\GitHub\Spam-Bot\Spam_Bot\bin\Debug\Spam_Bot.exe
+D:\GitHub\Spam-Bot\Spam_Bot\bin\Debug\Spam_Bot.pdb
+D:\GitHub\Spam-Bot\Spam_Bot\obj\Debug\Spam_Bot.csprojAssemblyReference.cache
+D:\GitHub\Spam-Bot\Spam_Bot\obj\Debug\Spam_Bot.Form1.resources
+D:\GitHub\Spam-Bot\Spam_Bot\obj\Debug\Spam_Bot.Properties.Resources.resources
+D:\GitHub\Spam-Bot\Spam_Bot\obj\Debug\Spam_Bot.csproj.GenerateResource.cache
+D:\GitHub\Spam-Bot\Spam_Bot\obj\Debug\Spam_Bot.csproj.CoreCompileInputs.cache
+D:\GitHub\Spam-Bot\Spam_Bot\obj\Debug\Spam_Bot.exe
+D:\GitHub\Spam-Bot\Spam_Bot\obj\Debug\Spam_Bot.pdb
