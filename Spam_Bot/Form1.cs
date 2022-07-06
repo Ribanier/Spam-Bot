@@ -31,14 +31,15 @@ namespace Spam_Bot
                 richTextBox1.Focus();
             }
             else
-            {             
-                    sayac = Convert.ToInt32(numericUpDown2.Value);
-                    timer1.Start();
-                    button1.Enabled = false;
-                    button2.Enabled = true;
-                numericUpDown1.ReadOnly = true;
+            {
+                Clipboard.Clear();
+                Clipboard.SetText(richTextBox1.Text);
+                sayac = Convert.ToInt32(numericUpDown2.Value);
+                timer1.Start();
+                button1.Enabled = false;
+                button2.Enabled = true;
                 numericUpDown2.ReadOnly = true;
-                richTextBox1.ReadOnly = true;
+                richTextBox1.Enabled = false;
             }
         }
 
@@ -47,14 +48,15 @@ namespace Spam_Bot
             button1.Enabled = true;
             button2.Enabled = false;
             numericUpDown2.Value = 5;
-            numericUpDown1.ReadOnly = false;
             numericUpDown2.ReadOnly = false;
             richTextBox1.ReadOnly = false;
-            timer1.Stop();          
+            richTextBox1.Enabled = true;
+            timer1.Stop();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            timer1.Stop();
             #region
             /* sayac++;
 
@@ -71,17 +73,15 @@ namespace Spam_Bot
             if (sayac == 0)
             {
                 if (checkBox1.Checked)
-                {                                    
-                    timer1.Interval = Convert.ToInt32(numericUpDown1.Value);
-                    Clipboard.SetText(richTextBox1.Text);
+                {
+                    timer1.Interval = Convert.ToInt32(trackBar1.Value);
                     SendKeys.SendWait("^{V}");
                     SendKeys.SendWait("{ENTER}");
 
                 }
                 else
                 {
-                    timer1.Interval = Convert.ToInt32(numericUpDown1.Value);
-                    Clipboard.SetText(richTextBox1.Text);
+                    timer1.Interval = Convert.ToInt32(trackBar1.Value);
                     SendKeys.SendWait("^{V}");
                 }
             }
@@ -91,17 +91,17 @@ namespace Spam_Bot
                 sayac = sayac - 1;
                 numericUpDown2.Value = sayac;
             }
+            timer1.Start();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-          
+
         }
 
         private void Form1_Leave(object sender, EventArgs e)
         {
-            Form1 frm = new Form1();
-            frm.Close();
+            this.Close();
         }
 
         private void Form1_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -111,12 +111,32 @@ namespace Spam_Bot
 
         private void button2_MouseEnter(object sender, EventArgs e)
         {
-            timer1.Interval = 10000;
+            if (button2.Enabled == true)
+                timer1.Interval = 100000;
         }
 
         private void button2_MouseLeave(object sender, EventArgs e)
         {
-            timer1.Interval = Convert.ToInt32(numericUpDown1.Value);
+            if (button2.Enabled == true)
+                timer1.Interval = Convert.ToInt32(trackBar1.Value);
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            timer1.Stop();
+        }
+
+        private void trackBar1_MouseLeave(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void Form1_MouseHover(object sender, EventArgs e)
+        {
+            var tt = new ToolTip();
+            tt.SetToolTip(this, "Double click to stop spamming");
+
         }
     }
 }
+

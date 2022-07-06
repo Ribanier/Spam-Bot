@@ -28,3 +28,14 @@ D:\GitHub\Spam-Bot\Spam_Bot\obj\Debug\Spam_Bot.csproj.GenerateResource.cache
 D:\GitHub\Spam-Bot\Spam_Bot\obj\Debug\Spam_Bot.csproj.CoreCompileInputs.cache
 D:\GitHub\Spam-Bot\Spam_Bot\obj\Debug\Spam_Bot.exe
 D:\GitHub\Spam-Bot\Spam_Bot\obj\Debug\Spam_Bot.pdb
+D:\Yazılım\Github ve projeler\Spam-Bot\Spam_Bot\bin\Debug\Spam_Bot.exe.config
+D:\Yazılım\Github ve projeler\Spam-Bot\Spam_Bot\bin\Debug\Spam_Bot.exe
+D:\Yazılım\Github ve projeler\Spam-Bot\Spam_Bot\bin\Debug\Spam_Bot.pdb
+D:\Yazılım\Github ve projeler\Spam-Bot\Spam_Bot\obj\Debug\Spam_Bot.csproj.AssemblyReference.cache
+D:\Yazılım\Github ve projeler\Spam-Bot\Spam_Bot\obj\Debug\Spam_Bot.csproj.SuggestedBindingRedirects.cache
+D:\Yazılım\Github ve projeler\Spam-Bot\Spam_Bot\obj\Debug\Spam_Bot.Form1.resources
+D:\Yazılım\Github ve projeler\Spam-Bot\Spam_Bot\obj\Debug\Spam_Bot.Properties.Resources.resources
+D:\Yazılım\Github ve projeler\Spam-Bot\Spam_Bot\obj\Debug\Spam_Bot.csproj.GenerateResource.cache
+D:\Yazılım\Github ve projeler\Spam-Bot\Spam_Bot\obj\Debug\Spam_Bot.csproj.CoreCompileInputs.cache
+D:\Yazılım\Github ve projeler\Spam-Bot\Spam_Bot\obj\Debug\Spam_Bot.exe
+D:\Yazılım\Github ve projeler\Spam-Bot\Spam_Bot\obj\Debug\Spam_Bot.pdb
