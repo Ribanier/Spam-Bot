@@ -128,6 +128,7 @@ namespace Spam_Bot
 
         private void trackBar1_MouseLeave(object sender, EventArgs e)
         {
+            if(button1.Enabled==false)
             timer1.Start();
         }
 
